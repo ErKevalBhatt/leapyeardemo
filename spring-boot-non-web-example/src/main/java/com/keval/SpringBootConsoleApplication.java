@@ -30,7 +30,7 @@ public class SpringBootConsoleApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         if (args.length > 0 ) {
-            System.out.println(yearCheckService.isLeapYear(args[0].toString()));
+            System.out.println("Input Year: "+args[0].toString()+((yearCheckService.isLeapYear(args[0].toString()))?" is Leap year":" is not Leap Year"));
         }else{
             System.out.println("Please provide year as command line argument to validate as a leap year.");
         }
