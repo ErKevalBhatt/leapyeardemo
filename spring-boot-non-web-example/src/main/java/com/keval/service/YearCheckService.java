@@ -13,8 +13,10 @@ public class YearCheckService {
     		if((inputYear % 400)==0) {
     			return true;
     		}else {
-    			if((inputYear % 4)==0) {
-    				return true;
+    			if((inputYear % 100)!=0) {
+    				if((inputYear % 4)==0) {
+        				return true;
+        			}
     			}
     		}
     	}catch(NumberFormatException ex) {
