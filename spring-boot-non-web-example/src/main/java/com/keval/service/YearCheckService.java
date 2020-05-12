@@ -7,7 +7,12 @@ public class YearCheckService {
 
     public boolean isLeapYear(String year) {
     	
-    	int inputYear = Integer.parseInt(year);
+    	try {
+    		int inputYear = Integer.parseInt(year);
+    	}catch(NumberFormatException ex) {
+    		throw ex;
+    	}
+    	
         return false;
     }
 

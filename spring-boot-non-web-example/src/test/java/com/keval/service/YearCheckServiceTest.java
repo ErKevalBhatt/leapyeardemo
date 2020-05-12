@@ -19,10 +19,9 @@ public class YearCheckServiceTest {
 		assertEquals(true, result);
 	}
 	
-	@Test
+	@Test(expected = RuntimeException.class)
 	public void testInputValidation() {
-		boolean result = yearCheckService.isLeapYear("test"); 
-		assertEquals(true, result);
+		yearCheckService.isLeapYear("test"); 
 	}
 	
 }
