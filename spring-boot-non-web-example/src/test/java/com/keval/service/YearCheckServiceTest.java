@@ -24,4 +24,10 @@ public class YearCheckServiceTest {
 		yearCheckService.isLeapYear("test"); 
 	}
 	
+	@Test
+	public void testFindTheLeapYearForDivBy100() {
+		boolean result = yearCheckService.isLeapYear("1700"); 
+		assertEquals(false, result);
+	}
+	
 }
