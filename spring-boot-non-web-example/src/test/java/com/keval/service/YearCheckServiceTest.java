@@ -36,4 +36,10 @@ public class YearCheckServiceTest {
 		assertEquals(false, result);
 	}
 	
+	@Test
+	public void testFindTheLeapYearForNotDivBy4() {
+		boolean result = yearCheckService.isLeapYear("2017"); 
+		assertEquals(false, result);
+	}
+	
 }
