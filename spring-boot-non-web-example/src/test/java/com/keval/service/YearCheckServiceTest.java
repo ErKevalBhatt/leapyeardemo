@@ -14,8 +14,14 @@ public class YearCheckServiceTest {
 	YearCheckService yearCheckService;
 	
 	@Test
-	public void testFindTheGreatestFromAllData() {
+	public void testFindTheLeapYear() {
 		boolean result = yearCheckService.isLeapYear("2000"); 
+		assertEquals(true, result);
+	}
+	
+	@Test
+	public void testInputValidation() {
+		boolean result = yearCheckService.isLeapYear("test"); 
 		assertEquals(true, result);
 	}
 	
