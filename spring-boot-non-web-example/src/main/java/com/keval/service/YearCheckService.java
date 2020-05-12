@@ -9,6 +9,10 @@ public class YearCheckService {
     	
     	try {
     		int inputYear = Integer.parseInt(year);
+    		
+    		if((inputYear % 400)==0) {
+    			return true;
+    		}
     	}catch(NumberFormatException ex) {
     		throw ex;
     	}
